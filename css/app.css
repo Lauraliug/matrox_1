@@ -1,0 +1,511 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+/* Font family*/
+/* Font size*/
+/* Media*/
+/* Color*/
+/* Font family*/
+/* Font size*/
+/* Media*/
+/* Color*/
+header {
+  font-family: "Kiwi Maru", serif;
+}
+
+header .nav {
+  background-color: #5353da;
+  overflow: hidden;
+}
+
+header .nav a {
+  float: left;
+  color: #fcfbf9;
+  text-align: center;
+  font-size: 25px;
+  padding: 20px 20px;
+}
+
+header .nav .active {
+  color: black;
+  background-color: red;
+}
+
+header .nav :hover {
+  background-color: #fcfbf9;
+  color: red;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.wrapper main {
+  width: 100%;
+  height: 100%;
+  background-image: url(../img/background.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+}
+
+.wrapper main .main-container {
+  width: 100%;
+  text-align: center;
+}
+
+@media (max-width: 720px) {
+  .wrapper main .main-container {
+    height: 100%;
+  }
+}
+
+.wrapper main .main-container img {
+  margin-top: -10px;
+}
+
+@media (max-width: 400px) {
+  .wrapper main .main-container img {
+    width: 100px;
+  }
+}
+
+.wrapper main .main-container h1 {
+  font-size: 70px;
+  font-family: "Kiwi Maru", serif;
+  color: #fcfbf9;
+}
+
+@media (max-width: 400px) {
+  .wrapper main .main-container h1 {
+    font-size: 35px;
+    width: 300px;
+  }
+}
+
+.wrapper main .main-container p {
+  font-family: "Kiwi Maru", serif;
+  font-size: 15px;
+  color: #fcfbf9;
+  padding-top: 30px;
+}
+
+@media (max-width: 400px) {
+  .wrapper main .main-container p {
+    font-size: 15px;
+  }
+}
+
+.wrapper main .main-container .time {
+  display: inline-block;
+  width: 100%;
+  max-width: 400px;
+  padding: 30px 0px;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 720px) {
+  .wrapper main .main-container .time {
+    max-width: 400px;
+  }
+}
+
+.wrapper main .main-container .time .days,
+.wrapper main .main-container .time .hours,
+.wrapper main .main-container .time .minutes,
+.wrapper main .main-container .time .seconds {
+  float: left;
+  color: #fcfbf9;
+  width: 100%;
+  width: calc(100% / 4);
+  font-family: "Lexend", sans-serif;
+}
+
+.wrapper main .main-container .time label {
+  width: 100%;
+  float: left;
+  text-align: center;
+  font-size: 60px;
+}
+
+.wrapper main .main-container .time span {
+  width: 100%;
+  float: left;
+  text-align: center;
+  font-size: 15px;
+  padding: 10px 0px;
+  font-family: "Kiwi Maru", serif;
+}
+
+.wrapper main .main-container form {
+  text-align: center;
+}
+
+.wrapper main .main-container form p {
+  font-family: "Kiwi Maru", serif;
+  font-size: 25px;
+}
+
+.wrapper main .main-container form input {
+  width: 30%;
+  height: 20px;
+  border-bottom: 3px solid #fcfbf9;
+  background-color: transparent;
+}
+
+.wrapper main .main-container form button {
+  background-color: red;
+  width: 100px;
+  height: 40px;
+  border-radius: 25px;
+  color: #fcfbf9;
+  margin-top: 10px;
+  font-size: 15px;
+}
+
+.wrapper main .main-container .icon-scroll {
+  width: 40px;
+  height: 70px;
+  border-radius: 25px;
+  border: 3px solid #fcfbf9;
+  margin-left: calc(50% - 20px);
+  margin-top: 20px;
+}
+
+.wrapper main .main-container .icon-scroll .scroll {
+  width: 8px;
+  height: 8px;
+  background: #fcfbf9;
+  margin-left: calc(50% - 4px);
+  border-radius: 5px;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-name: scroll;
+}
+
+@keyframes scroll {
+  from {
+    top: 0%;
+    opacity: 1;
+  }
+  to {
+    bottom: 100%;
+    opacity: 0;
+    transform: translateY(47px);
+  }
+}
+
+.wrapper section {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+}
+
+@media (max-width: 720px) {
+  .wrapper section {
+    height: 100%;
+  }
+}
+
+.wrapper section .block {
+  display: inline-block;
+  width: 100%;
+  padding-top: 100px;
+}
+
+@media (max-width: 720px) {
+  .wrapper section .block {
+    height: 100%;
+  }
+}
+
+.wrapper section .block .block-left {
+  float: left;
+  width: 50%;
+}
+
+@media (max-width: 400px) {
+  .wrapper section .block .block-left {
+    font-size: 35px;
+    width: 300px;
+  }
+}
+
+.wrapper section .block .block-left h2 {
+  font-family: "Kiwi Maru", serif;
+  font-size: 25px;
+  padding-left: 10px;
+}
+
+@media (max-width: 400px) {
+  .wrapper section .block .block-left h2 {
+    font-size: 35px;
+    width: 300px;
+  }
+}
+
+.wrapper section .block .block-left p {
+  font-family: "Kiwi Maru", serif;
+  font-size: 15px;
+  padding: 10px;
+}
+
+.wrapper section .block .block-left p span {
+  color: red;
+  font-size: 15px;
+}
+
+.wrapper section .block .block-left .file {
+  width: 50%;
+  width: 400px;
+  height: 10px;
+}
+
+.wrapper section .block .block-left label {
+  font-family: "Kiwi Maru", serif;
+  font-size: 15px;
+}
+
+.wrapper section .block .block-left progress::-webkit-progress-value {
+  background: #5353da;
+}
+
+.wrapper section .block .block-left div {
+  padding: 10px;
+}
+
+@media (max-width: 920px) {
+  .wrapper section .block .block-left {
+    width: 100%;
+  }
+}
+
+.wrapper section .block .block-right {
+  float: left;
+  width: 50%;
+}
+
+.wrapper section .block .block-right h2 {
+  font-family: "Kiwi Maru", serif;
+  font-size: 25px;
+  padding-left: 10px;
+}
+
+@media (max-width: 720px) {
+  .wrapper section .block .block-right h2 {
+    font-size: 15px;
+  }
+}
+
+.wrapper section .block .block-right p {
+  font-family: "Kiwi Maru", serif;
+  font-size: 15px;
+  padding: 10px;
+}
+
+.wrapper section .block .block-right p span {
+  color: red;
+  font-size: 15px;
+}
+
+.wrapper section .block .block-right button {
+  background-color: red;
+  color: #fcfbf9;
+  width: 150px;
+  height: 40px;
+  font-family: "Kiwi Maru", serif;
+  border-radius: 10px;
+  font-size: 15px;
+  margin-left: 60%;
+  margin-top: 10px;
+}
+
+@media (max-width: 400px) {
+  .wrapper section .block .block-right button {
+    width: 70px;
+    height: 20px;
+    font-size: 8px;
+    margin: 1px;
+  }
+}
+
+.wrapper section .block .block-right input {
+  width: 30%;
+  height: 20px;
+  border-bottom: 1px solid black;
+  background-color: transparent;
+}
+
+.wrapper section .block .block-right textarea {
+  border-bottom: 1px solid black;
+}
+
+@media (max-width: 920px) {
+  .wrapper section .block .block-right {
+    width: 100%;
+  }
+}
+
+.wrapper footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: #5353da;
+}
+
+.wrapper footer .arrow-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+}
+
+.wrapper footer .arrow-btn a {
+  height: 40px;
+  width: 40px;
+  text-align: center;
+  background: red;
+  display: block;
+  border-radius: 100%;
+}
+
+.wrapper footer .arrow-btn span {
+  color: #fcfbf9;
+  font-size: 15px;
+  line-height: 25px;
+}
+
+@media (max-width: 720px) {
+  .wrapper footer {
+    width: 100%;
+  }
+}
+
+.wrapper footer .footer-box {
+  width: 100%;
+  text-align: center;
+  text-align: center;
+  justify-content: center;
+}
+
+.wrapper footer .footer-box .icon-box {
+  display: inline-block;
+  width: 100%;
+}
+
+.wrapper footer .footer-box .fa {
+  width: 50px;
+  color: #fcfbf9;
+}
+
+.wrapper footer .footer-box p {
+  font-family: "Kiwi Maru", serif;
+  font-size: 15px;
+  color: #fcfbf9;
+}
+
+@media (max-width: 400px) {
+  .wrapper footer .footer-box img {
+    width: 100px;
+  }
+}
+
+.wrapper footer .container {
+  width: 100%;
+  max-width: 1200px;
+  padding: 3%;
+}
+
+@media only screen and (max-width: 720px) {
+  .wrapper footer .container {
+    max-width: 98%;
+  }
+}
