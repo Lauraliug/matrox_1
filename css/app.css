@@ -85,6 +85,10 @@ h6 {
   font-weight: 400;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* Font family*/
 /* Font size*/
 /* Media*/
@@ -94,30 +98,63 @@ h6 {
 /* Media*/
 /* Color*/
 header {
-  font-family: "Kiwi Maru", serif;
-}
-
-header .nav {
+  display: flex;
+  width: 100%;
   background-color: #5353da;
-  overflow: hidden;
+  justify-content: center;
 }
 
-header .nav a {
-  float: left;
-  color: #fcfbf9;
-  text-align: center;
+header .container {
+  width: 100%;
+  max-width: 1200px;
+}
+
+header .container .header-wrap {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+header .container .header-wrap .logo {
+  width: 200px;
   font-size: 25px;
-  padding: 20px 20px;
+  color: #fcfbf9;
 }
 
-header .nav .active {
-  color: black;
-  background-color: red;
+header .container .header-wrap nav {
+  width: 300px;
+  display: flex;
+  justify-content: space-between;
 }
 
-header .nav :hover {
+@media (max-width: 720px) {
+  header .container .header-wrap nav {
+    display: none;
+  }
+}
+
+header .container .header-wrap a {
+  color: #fcfbf9;
+  font-size: 25px;
+}
+
+header .container .header-wrap .burger {
+  display: none;
+}
+
+@media (max-width: 720px) {
+  header .container .header-wrap .burger {
+    display: inline-block;
+  }
+}
+
+header .container .header-wrap .burger div {
+  width: 50px;
+  height: 5px;
+  border: 1px solid white;
+  border-radius: 5px;
   background-color: #fcfbf9;
-  color: red;
+  margin: 2px;
 }
 
 .wrapper {
