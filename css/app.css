@@ -119,23 +119,49 @@ header .container .header-wrap .logo {
   width: 200px;
   font-size: 25px;
   color: #fcfbf9;
+  padding: 10px;
 }
 
 header .container .header-wrap nav {
-  width: 300px;
   display: flex;
   justify-content: space-between;
 }
 
 @media (max-width: 720px) {
   header .container .header-wrap nav {
-    display: none;
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(218, 154, 57, 0.87);
+    height: 1900px;
+    transform: translateX(100%);
   }
 }
 
 header .container .header-wrap a {
   color: #fcfbf9;
   font-size: 25px;
+  padding: 10px;
+}
+
+@media (max-width: 720px) {
+  header .container .header-wrap a {
+    display: block;
+    color: black;
+    text-align: center;
+    font-weight: bold;
+    font-size: 35px;
+  }
+  header .container .header-wrap a:first-of-type {
+    margin-top: 150px;
+  }
+}
+
+header .container .header-wrap .on {
+  transform: translateX(0%);
 }
 
 header .container .header-wrap .burger {
@@ -344,10 +370,9 @@ header .container .header-wrap .burger div {
   width: 50%;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 720px) {
   .wrapper section .block .block-left {
-    font-size: 35px;
-    width: 300px;
+    width: 100%;
   }
 }
 
